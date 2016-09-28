@@ -4,7 +4,7 @@
 
     <groupId>com.karaca</groupId>
     <artifactId>KemalSamiKARACA</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.002</version>
     <packaging>war</packaging>
 
     <name>KemalSamiKARACA</name>
