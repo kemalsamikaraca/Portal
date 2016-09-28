@@ -435,30 +435,35 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="text" id="name" class="form-control" placeholder="Name" required="required"></input>
+                      <h:inputText id="name" class="form-control" value="#{mailBean.name}" a:placeholder="Name" a:required="required"></h:inputText>
                       <p class="help-block text-danger"></p>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <input type="email" id="email" class="form-control" placeholder="Email" required="required"></input>
+                        <h:inputText id="email" class="form-control" value="#{mailBean.mail}" a:placeholder="Email" a:required="required"></h:inputText>
                       <p class="help-block text-danger"></p>
                     </div>
                   </div>
                 </div>
+                    
                 <div class="form-group">
-                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Message" required="true"></textarea>
-                  <p class="help-block text-danger"></p>
+                    <h:inputTextarea id="message" class="form-control" value="#{mailBean.messageContent}" rows="4" a:placeholder="Message" a:required="required"></h:inputTextarea>
+                    <p class="help-block text-danger"></p>
                 </div>
+
                 <div id="success"></div>
-                <button type="submit" class="btn btn-default">Send Message</button>                
-              </h:form>
-              
-<!--              <h:form>
+                
+                <!--<button type="submit" class="btn btn-default">Send Message</button>-->
                 <p:messages showDetail="true"/>
-                <p:captcha label="Captcha" />
-                <p:commandButton value="Send Message" action="{captchaView.test()}" actionListener="{captchaView.submit()}" ajax="false" icon="ui-icon-check"/>
-              </h:form>-->
+                <p:captcha label="Captcha"/>
+                <p:commandButton value="Send Message"
+                                 action="#{mailBean.sendMail()}"
+                                 actionListener="#{captchaView.submit()}" 
+                                 ajax="false" 
+                                 class="btn btn-default"/>
+                
+              </h:form>
                 
               <div class="social">
                 <ul>
@@ -488,10 +493,9 @@
         <script type="text/javascript" src="js/jquery.isotope.js"></script> 
         <script type="text/javascript" src="js/jquery.counterup.js"></script> 
         <script type="text/javascript" src="js/waypoints.js"></script> 
-        <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-        <!--<script type="text/javascript" src="js/contact_me.js"></script>--> 
+        <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>  
         <script type="text/javascript" src="js/main.js"></script>
         
-    </h:body>>
+    </h:body>
     
 </html>

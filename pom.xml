@@ -35,6 +35,14 @@
             <artifactId>primefaces</artifactId>
             <version>6.0</version>
         </dependency>
+        
+        <!-- SendGrid -->
+        <dependency>
+            <groupId>com.sendgrid</groupId>
+            <artifactId>sendgrid-java</artifactId>
+            <version>3.0.9</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     
     <build>
