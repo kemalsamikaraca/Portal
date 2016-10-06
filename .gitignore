@@ -11,3 +11,5 @@ build/
 .DS_Store
 Desktop.ini
 /target/
+
+faces-config.NavData
