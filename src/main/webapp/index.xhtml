@@ -75,7 +75,7 @@
                             <h1><h:outputText value="#{msg.header_intro_hello}"/><span class="name"> Kemal Sami KARACA</span></h1>
                             <strong style="display: none;">Kemal Sami KARACA</strong>
                             <p><h:outputText value="#{msg.header_intro_title}"/></p>
-                            <a href="#about" class="btn btn-default btn-lg page-scroll">Learn More</a> 
+                            <a href="#about" class="btn btn-default btn-lg page-scroll"><h:outputText value="#{msg.header_intro_learn}"/></a> 
                         </div>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                     <div class="col-md-12 text-center"><img src="img/about.png" class="img-responsive"></img></div>
                     <div class="col-md-8 col-md-offset-2">
                         <div class="about-text">
-                            <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare.</p>-->
+                            <br></br>
                             <h:outputText value="#{msg.about_me}" />
                             <p class="text-center"><a class="btn btn-primary" href="resume/_2016_06_01_Kemal Sami KARACA.pdf" download="true"><i class="fa fa-download"></i><h:outputText value="#{msg.download_resume}" /></a></p>
                         </div>
@@ -170,17 +170,17 @@
         <div id="portfolio">
             <div class="container">
                 <div class="section-title text-center center">
-                    <h2>Portfolio</h2>
+                    <h2><h:outputText value="#{msg.navigation_portfolio}"/></h2>
                     <hr></hr>
                 </div>
                 <div class="categories">
                     <ul class="cat">
                         <li>
                             <ol class="type">
-                                <li><a href="#" data-filter="*" class="active">All</a></li>
+                                <li><a href="#" data-filter="*" class="active"><h:outputText value="#{msg.portfolio_all}"/></a></li>
                                 <li><a href="#" data-filter=".tubitak">TÜBİTAK</a></li>
                                 <li><a href="#" data-filter=".meb">MEB</a></li>
-                                <li><a href="#" data-filter=".personal">Personal</a></li>
+                                <li><a href="#" data-filter=".personal"><h:outputText value="#{msg.portfolio_personal}"/></a></li>
                             </ol>
                         </li>
                     </ul>
@@ -294,7 +294,7 @@
         <div id="resume" class="text-center">
             <div class="container">
                 <div class="section-title center">
-                    <h2>Experience</h2>
+                    <h2><h:outputText value="#{msg.experience}"></h:outputText></h2>
                     <hr></hr>
                 </div>
                 <div class="row">
@@ -429,7 +429,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <div class="col-md-4"> <i class="fa fa-map-marker fa-2x"></i>
                         <p>06500 Çankaya, <br></br>
-                            Ankara, TURKEY</p>
+                            Ankara, <h:outputText value="#{msg.global_turkey}"/></p>
                     </div>
                     <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
                         <p>kskaraca@gmail.com</p>
@@ -441,25 +441,25 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="col-md-8 col-md-offset-2">
-                    <h3>Leave me a message</h3>
+                    <h3><h:outputText value="#{msg.contact_sendmail}"/></h3>
                     <h:form a:name="sentMessage" a:id="contactForm" a:novalidate="true">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <h:inputText id="name" class="form-control" value="#{mailBean.name}" a:placeholder="Name" a:required="required"></h:inputText>
+                                    <h:inputText id="name" class="form-control" value="#{mailBean.name}" a:placeholder="#{msg.contact_mail_name}" a:required="required"></h:inputText>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <h:inputText id="email" class="form-control" value="#{mailBean.mail}" a:placeholder="Email" a:required="required"></h:inputText>
+                                    <h:inputText id="email" class="form-control" value="#{mailBean.mail}" a:placeholder="#{msg.contact_mail_email}" a:required="required"></h:inputText>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <h:inputTextarea id="message" class="form-control" value="#{mailBean.messageContent}" rows="4" a:placeholder="Message" a:required="required"></h:inputTextarea>
+                            <h:inputTextarea id="message" class="form-control" value="#{mailBean.messageContent}" rows="4" a:placeholder="#{msg.contact_mail_message}" a:required="required"></h:inputTextarea>
                             <p class="help-block text-danger"></p>
                         </div>
 
@@ -468,7 +468,7 @@
                         <!--<button type="submit" class="btn btn-default">Send Message</button>-->
                         <p:messages showDetail="true"/>
                         <p:captcha label="Captcha"/>
-                        <p:commandButton value="Send Message"
+                        <p:commandButton value="#{msg.global_send_message}"
                                          action="#{mailBean.sendMail()}"
                                          actionListener="#{captchaView.submit()}" 
                                          ajax="false" 
@@ -492,7 +492,7 @@
         <div id="footer">
             <div class="container text-center">
                 <div class="fnav">
-                    <p>Copyright &#169;  2016 Kemal Sami KARACA.</p>
+                    <p>Copyright &#169;  2016 Kemal Sami KARACA</p>
                 </div>
             </div>
         </div>
