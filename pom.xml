@@ -4,7 +4,7 @@
 
     <groupId>com.karaca</groupId>
     <artifactId>KemalSamiKARACA</artifactId>
-    <version>1.002</version>
+    <version>1.003</version>
     <packaging>war</packaging>
 
     <name>KemalSamiKARACA</name>
@@ -24,9 +24,9 @@
         
         <!-- JSF -->
         <dependency>
-            <groupId>javax.faces</groupId>
-            <artifactId>jsf-api</artifactId>
-            <version>2.0</version>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <version>2.2.13</version>
             <scope>provided</scope>
         </dependency>
         
