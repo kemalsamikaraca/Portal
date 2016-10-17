@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+MIT License
+
+Copyright (c) 2016 kemalsamikaraca
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <h:body>
+        
+        <!-- Header -->
+        <header id="header">
+            <div class="intro">
+                <div class="container">
+                    <div class="row">
+                        <div class="intro-text">
+                            <h1><h:outputText value="#{msg.header_intro_hello}"/><span class="name"> Kemal Sami KARACA</span></h1>
+                            <strong style="display: none;">Kemal Sami KARACA</strong>
+                            <p><h:outputText value="#{msg.header_intro_title}"/></p>
+                            <a href="#about" class="btn btn-default btn-lg page-scroll"><h:outputText value="#{msg.header_intro_learn}"/></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        
+        <!-- Navigation -->
+        <div id="nav">
+            <nav class="navbar navbar-custom">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
+                        <a class="navbar-brand page-scroll" href="#page-top">Kemal Sami KARACA</a> </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                        <ul class="nav navbar-nav">
+                            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                            <li class="hidden"> <a href="#page-top"></a> </li>
+                            <li> <a class="page-scroll" href="#about"><h:outputText value="#{msg.navigation_about}"/></a> </li>
+                            <li> <a class="page-scroll" href="#skills"><h:outputText value="#{msg.navigation_skills}"/></a> </li>
+                            <li> <a class="page-scroll" href="#portfolio"><h:outputText value="#{msg.navigation_portfolio}"/></a> </li>
+                            <li> <a class="page-scroll" href="#resume"><h:outputText value="#{msg.navigation_resume}"/></a> </li>
+                            <li> <a class="page-scroll" href="#contact"><h:outputText value="#{msg.navigation_contact}"/></a> </li>
+                            <li> 
+                                <h:form>
+                                    <h:commandButton action="#{languageBean.changeLanguage('tr')}" value="TR" image="locale/flags-tr.png" class="flag flag-tr" />
+                                    <h:commandButton action="#{languageBean.changeLanguage('')}" value="EN" image="locale/flags-gb.png" class="flag flag-gb"  />
+                                </h:form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+    </h:body>
+    
+</html>
